@@ -1,0 +1,19 @@
+config:
+  target: 'http://localhost:3000' # App URL
+  phases:
+    - duration: 1 
+      arrivalRate: 10000 # Amount of VU's per second
+  defaults:
+    headers:
+      Content-Type: 'application/json'
+
+scenarios:
+  - name: 'Update User Balance'
+    flow:
+      - loop:
+          - post:
+              url: '/api/update-balance'
+              json:
+                userId: 1
+                amount: 2
+        count: 1 # Amount of requests
