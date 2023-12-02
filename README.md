@@ -40,7 +40,7 @@ DB_NAME='webapp'
 DB_USERNAME='postgres'
 DB_PASSWORD='123456'
 DEADLOCK_RETRY=5
-PORT=3000`
+PORT=3000
 ```
 Customize the values according to your environment.
 
